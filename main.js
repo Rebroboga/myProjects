@@ -13,6 +13,7 @@ let color = document.querySelector('.about-me__translate-ru');
 let block = document.querySelector('.achievements__image');
 let fixed = document.querySelectorAll('.accordion__control');
 
+
 wrap.addEventListener('click', function() {
 
   wrap.classList.add('color--active');
@@ -32,13 +33,28 @@ color.addEventListener('click', function() {
   color.classList.add('color--active');
 })
 
-// fixed.forEach(item => {
-//   item.addEventListener('click', function() {
+fixed.forEach(item => {
+  item.addEventListener('click', function() {
     
-//     fixed.forEach(elem => 
-//       elem.classList.remove('orange--active'));
-//       this.classList.toggle('orange--active');
+    fixed.forEach(elem => 
+      elem.classList.remove('orange--active'));
+      this.classList.add('orange--active');
 
-//   })
-// })
+      const button = document.getElementById('color');
+
+      button.onclick = function(event) {
+        if (this.classList.contains('black')) {
+          this.classList.remove('black');
+          this.classList.add('orange--active');
+        } else {
+          this.classList.remove('orange--active');
+          this.classList.add('black')
+        }
+      }
+  });
+});
+
+
+
+
 
