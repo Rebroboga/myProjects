@@ -215,6 +215,7 @@ body {
 
 .about-me__float {
   float: right;
+  width: 50%;
 }
 
 .about-me__text {
